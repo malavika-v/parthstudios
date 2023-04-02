@@ -1,0 +1,475 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Mouse Memoirs', sans-serif;
+ }
+ 
+ .header {
+     width: 100%;
+     height: 100vh;
+     position: relative;
+     background: url("bakgr.jpeg");
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+ }
+ 
+ .navbar {
+     top: 0;
+     height: 90px;
+     display: flex;
+     width: 100%;
+     background-color: black;
+     justify-content: space-between;
+     position: fixed;
+     z-index: 10;
+ }
+ 
+ .navbar img {
+     /* to set logo dimensions */
+     height: 80px;
+     width: 150px;
+ }
+ 
+ .navbar .nav-links {
+     margin-top: 20px;
+ }
+ 
+ .navbar .nav-links ul li {
+     /* this will make home blog gallery contact in line */
+     display: inline-block;
+     padding: 5px 28px;
+     list-style: none;
+ }
+ 
+ .nav-links ul li a {
+     /* to set color of home blog gallery contact font */
+     color: #fff;
+     font-size: 18px;
+     text-decoration: none;
+     padding: 5px;
+     border-radius: 8px;
+ }
+ 
+ .nav-links ul li a:hover {
+     /* this will make the color red if you click on naviigation links */
+     background-color: red;
+     color: black;
+ }
+ /* this will center the image and text in center */
+ 
+ .text-box {
+     width: 100%;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate (-50%, -50%);
+     text-align: center;
+     padding-top: 100px;
+ }
+ /* this will make the profile image in circle */
+ 
+ .image-box img {
+     width: 220px;
+     height: 220px;
+     border: 4px solid #fff;
+     border-radius: 50%;
+     margin-bottom: 10px;
+ }
+ 
+ .image-box h1 {
+     color: #fff;
+     font-size: 42px;
+     font-weight: bold;
+     margin-bottom: 10px;
+ }
+ /* for h2 */
+ 
+ .image-box h2 {
+     color: rgb(233, 88, 35);
+     letter-spacing: 4px;
+     margin-bottom: 10px;
+ }
+ /* for quote */
+ 
+ .text-box p {
+     color: rgb(255, 64, 0);
+     font-size: 18px;
+     font-family: cursive;
+     text-align: center;
+     margin: 5px 80px;
+ }
+ /* for social link */
+ 
+ .social-links h3 {
+     font-size: 26px;
+     color: rgb(250, 245, 244);
+     letter-spacing: 2px;
+     font-weight: bold;
+     margin-bottom: 10px;
+ }
+ 
+ .social-links a {
+     font-size: 22px;
+     border: 1px solid #fff;
+     color: #ffff;
+     padding: 5px;
+     margin: 15px;
+     cursor: pointer;
+     border-radius: 10px;
+     transition: 0.5s;
+ }
+ 
+ .social-links a:hover {
+     border: 1px solid #000;
+     color: #000;
+ }
+ 
+ .navbar .nav-links .fa {
+     display: none;
+ }
+ 
+ @media (max-width: 767px) {
+     .navbar {
+         height: 80px;
+     }
+     .navbar .nav-links ul li {
+         display: block;
+     }
+     .navbar img {
+         height: 60px;
+         width: 120px;
+     }
+     .image-box h1 {
+         font-size: 26px;
+     }
+     .image-box img {
+         width: 160px;
+         height: 160px;
+     }
+     .image-box h2 {
+         letter-spacing: 2px;
+         font-size: 20px;
+     }
+     .text-box p {
+         font-size: 15px;
+         margin: auto;
+     }
+     .social-links h3 {
+         font-size: 20px;
+     }
+     .social-links a {
+         font-size: 18px;
+         margin: 8px;
+         padding: 3px;
+     }
+     .navbar .nav-links {
+         position: absolute;
+         display: block;
+         background-color: #000;
+         height: 100vh;
+         width: 0;
+         top: 0;
+         right: 0;
+         text-align: left;
+         transition: 0.5s;
+         margin-top: 0;
+     }
+     /* for meun icon */
+     .navbar .nav links .fa {
+         display: block;
+         color: #fff;
+         margin: 5px;
+         font-size: 28 px;
+         cursor: pointer;
+     }
+     .navbar .nav-links ul {
+         padding: 5px 15px;
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+     }
+ }
+ 
+ #blogs h1 {
+     color: purple;
+     font-size: 42px;
+     text-align: center;
+ }
+ 
+ .container {
+     /* 100% */
+     width: 100%;
+     /* not included "/
+                                    /* padding: 10px; */
+     background: #ddd;
+     margin: 100px auto;
+     display: flex;
+     flex-wrap: wrap;
+     margin: 20px auto;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .container .card {
+     width: 350px;
+     height: 520px;
+     border: 1px solid #999;
+     display: flex;
+     flex-direction: column;
+     margin: 10px;
+     text-align: center;
+ }
+ 
+ .container .card .imagbox img {
+     width: 100%;
+     height: 350px;
+ }
+ 
+ .container .card h2 {
+     font-size: 26px;
+     color: rebeccapurple;
+ }
+ 
+ .container .card p {
+     font-size: 14px;
+     padding: 6px 8px;
+     margin-bottom: 8px;
+ }
+ /* for see more button */
+ 
+ .container .card .btn a {
+     font-size: 16px;
+     text-decoration: none;
+     border: 1px solid;
+     border-radius: 30px;
+     text-align: center;
+     color: purple;
+     padding: 5px;
+     transition: 0.5s;
+ }
+ 
+ .container .card .btn a:hover {
+     background-color: rgb(255, 47, 0);
+ }
+ 
+ -gallery {
+     position: relative;
+     padding: 10px;
+ }
+ 
+ .gallery hi {
+     color: purple;
+     font-size: 42px;
+     text-align: center;
+     margin-bottom: 15px;
+ }
+ 
+ .gallery .row {
+     display: flex;
+     flex-wrap: wrap;
+     text-align: center;
+     justify-content: center;
+ }
+ 
+ .column {
+     width: auto;
+     padding: 8px
+ }
+ 
+ .column img {
+     width: 300 px;
+     height: 250px;
+ }
+ 
+ about {
+     position: relative;
+     width: 100%;
+     display: flex;
+     height: auto;
+     margin-top: 30px;
+ }
+ 
+ .cols-1 {
+     flex-basis: 40%;
+     flex-grow: 1;
+     justify-content: space-between;
+ }
+ 
+ .cols-1 img {
+     height: 75%;
+     width: 70%;
+     margin: 30px;
+ }
+ 
+ .cols-1 image :hover {
+     transform: scale(1.1);
+ }
+ 
+ .cols-2 {
+     flex-basis: 60%;
+     flex-grow: 1;
+     justify-content: space-between;
+     text-align: center;
+ }
+ 
+ .cols-2 h1 {
+     color: purple;
+     font-size: 40px;
+ }
+ 
+ .cols-2 p {
+     font-size: 18px;
+     padding: 5px 30px;
+     margin-bottom: 6px;
+ }
+ 
+ .cols-2 a {
+     font-size: 20px;
+     font-size: 20px;
+     border: 1px solid;
+     margin: 40px;
+     text-decoration: none;
+     font-weight: bold;
+     color: #000;
+     border-radius: 30px;
+     padding: 5px;
+     transition: 0.5s;
+ }
+ 
+ .cols-2 a:hover {
+     background-color: red;
+ }
+ 
+ .contact {
+     margin: 10px 30px;
+ }
+ 
+ .contact h2 {
+     font-size: 40px;
+     color: purple;
+     margin-bottom: 8px;
+ }
+ 
+ .contact-box {
+     margin: 10px 0px;
+     border: 1px solid transparent;
+     width: 400px;
+     height: auto;
+     border-radius: 10px;
+ }
+ 
+ .details input {
+     padding: 8px 15px;
+     width: 95%;
+     margin: 10px;
+     border: 1px solid #999;
+     border-radius: 8px;
+ }
+ 
+ .details textarea {
+     padding: 20px 8px;
+     width: 95%;
+     margin: 10px;
+     border: 1px solid #999;
+     border-radius: 8px;
+ }
+ 
+ .details button {
+     padding: 5px 15px;
+     margin: 10px;
+     background-color: purple;
+     color: black;
+     border-radius: 30px;
+     cursor: pointer;
+     border: 1px solid;
+     font-size: 20px;
+ }
+ 
+ .details button:hover {
+     background: red;
+ }
+ 
+ footer {
+     width: 100%;
+     height: auto;
+     background-color: #000;
+     bottom: 0;
+     position: relative;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+ }
+ 
+ .footer-col-1 {
+     padding: 10px 30 px;
+     color: #fff;
+     flex-basis: 43%;
+ }
+ 
+ .footer-col-1 img {
+     height: 100px;
+     width: 130px;
+     margin-bottom: 10px;
+ }
+ 
+ .footer-col-1-h2 {
+     color: Opurple;
+     font-size: 30px;
+     font-weight: bold;
+     margin-bottom: 10px;
+ }
+ 
+ .footer-col-1 p {
+     text-align: left;
+     font-size: 17px;
+     margin-bottom: 10px;
+ }
+ 
+ .footer-col-2 {
+     padding: 15px 30px;
+ }
+ 
+ .footer-col-2 a {
+     color: floralwhite;
+     text-decoration: none;
+     font-size: 18px;
+     cursor: pointer;
+ }
+ 
+ .footer-col-2 a:hover {
+     color: purple;
+ }
+ 
+ .footer-col-2 p,
+ h5 {
+     font-size: 16px;
+     color: red;
+ }
+ 
+ .column {
+     width: 300px;
+     height: 250px;
+     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+ }
+ /* margin: 0 10px; */
+ 
+ .column img {
+     display: block;
+     width: 100%;
+     border-radius: 10px;
+ }
+ 
+ .column:hover {
+     transform: scale(2, 2);
+     z-index: 2;
+ }
+ /*.imagbox{
+width: 300px;
+height: 60px;
+background: black;
+float: left;
+margin: 0px 10px;
+}
